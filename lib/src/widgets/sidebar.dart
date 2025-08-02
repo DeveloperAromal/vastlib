@@ -8,7 +8,7 @@ class Sidebar extends StatelessWidget {
     return Container(
       width: 200,
       decoration: BoxDecoration(
-        color: const Color(0xFF232325), // gray-800
+        color: const Color(0xFF232325), 
         border: const Border(
           right: BorderSide(color: Colors.white10, width: 1),
         ),
@@ -29,18 +29,25 @@ class Sidebar extends StatelessWidget {
   }
 }
 
+
 class SideBtn extends StatelessWidget {
   final String title;
   final IconData icon;
+
   const SideBtn({required this.title, required this.icon, super.key});
 
   @override
   Widget build(BuildContext context) {
+    final currentRoute = ModalRoute.of(context)?.settings.name;
+
+    
+
+
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          // Add your navigation or action here
+          print("Current Route: $currentRoute");
         },
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
