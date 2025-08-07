@@ -7,18 +7,18 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color(0xFF0A0A0A), // Tailwind neutral-900
+      backgroundColor: Color(0xFFFFFFFF), // Main content area: white
       body: Row(
         children: [
-          Sidebar(),
+          Sidebar(), // Light sidebar already styled
           Expanded(
             child: Center(
               child: Text(
                 "Main Content Area",
                 style: TextStyle(
                   fontSize: 24,
-                  color: Colors.white70,
-                  fontWeight: FontWeight.w500,
+                  color: Color(0xFF1E293B), // Tailwind slate-800
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ),
